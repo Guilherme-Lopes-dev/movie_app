@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.movie-card img {
+    height: 300px;
+    width: 200px;
+}
+
+.movie-card{
+    background-color: green;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+}
+

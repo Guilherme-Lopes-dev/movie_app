@@ -6,24 +6,32 @@ import '../Main/css/MovieGrid.css'
 
 const imageURL = 'https://image.tmdb.org/t/p/w500/'
 
-const MovieCard = ({movie, showLink = true}) => {
+const MovieCard = ({ movie, showLink = true }) => {
     return (
-        <div className='movie-card'>
+        <Box className='movie-card'>
             <img src={imageURL + movie.poster_path} alt={movie.title} />
-            <Typography>Data de lançamento</Typography>
-            <Stack direction="row">
-                <Typography >
-                    <StarIcon/>{movie.vote_average}
-                </Typography>
+            <Typography>{movie.release_date}</Typography>
+            <Stack direction="row" spacing={3}>
+
+                <StarIcon />{movie.vote_average}
+
+                <Typography>{movie.genres}</Typography>
+
             </Stack>
 
             <Typography >
                 Valor
-            </Typography> 
-            <Button>
-                Adicionar
-            </Button>
-        </div>
+            </Typography>
+
+            <Stack direction='row' spacing={2}>
+                <Button variant="contained">
+                    Favoritar
+                </Button>
+                <Button variant="contained" >
+                    Comprar
+                </Button>
+            </Stack>
+        </Box>
     )
 }
 

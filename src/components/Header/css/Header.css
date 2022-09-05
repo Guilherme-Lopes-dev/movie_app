@@ -1,6 +1,6 @@
 .header {
   width: 100vw;
-  background-color: grey;
+  background-color: blue;
   height: 10vh;
   display: flex;
   flex-direction: row;

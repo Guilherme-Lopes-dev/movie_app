@@ -1,17 +1,26 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
 .container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: darkblue;
 }
 
 .movie-card img {
-    height: 300px;
-    width: 200px;
+    height: 350px;
+    width: 250px;
 }
 
 .movie-card{
-    background-color: green;
+    background-color: gray;
     width: fit-content;
     height: fit-content;
     padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+
 }
 

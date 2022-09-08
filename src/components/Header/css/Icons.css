@@ -2,10 +2,21 @@
     padding-top: 3vh;
     padding-right: 2vw;
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
+    
 }
 
 .favicon .shopicon{
     padding: 2rem;
+}
+
+.favicon :hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.9s ease-in-out;
+}
+
+.shopicon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.9s ease-in-out;
 }

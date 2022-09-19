@@ -1,32 +1,28 @@
-*{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+* {
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 .movie-card img {
-    height: 350px;
-    width: 250px;
-    transition: 0.5s ease;
-    border-radius: 5px;
-    
+  height: 350px;
+  width: 275px;
+  transition: 0.5s ease;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.movie-card img:hover{
-    transform: scale(1.1);
-    
+.movie-card img:hover {
+  transform: scale(1.1);
 }
 
-.movie-card{
-  
-    font-family: 'Montserrat', sans-serif;
-    width: fit-content;
-    height: fit-content;
-    background: rgb(64, 67, 82);
-    background: radial-gradient(
-      circle,
-      rgba(64, 67, 82, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    border-radius: 15px;
-    transition: 0.5s ease;
-
+.movie-card {
+  font-family: "Montserrat", sans-serif;
+  background: rgb(64, 67, 82);
+  background: radial-gradient(
+    circle,
+    rgba(64, 67, 82, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  border-radius: 15px;
+  transition: 0.5s ease;
+  width: fit-content;
 }

@@ -8,21 +8,33 @@ import logo from './assets/imgs/Logo.png'
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
-
-
+import { SearchOutlined } from '@ant-design/icons';
+import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 
 const Favorito = ({ showFavorite, setFavoriteState }) => {
   const toggleState = () => setFavoriteState();
 
   return (
     <>
-      <div className="button-favorite">
+      
         <Button onClick={toggleState}><FavoriteIcon /></Button>
-        <div className={`favorites-bar ${!showFavorite ? "hidden" : ""}`}>
-          Favoritos
-        </div>
-      </div>
+        
+        <Box className={`favorites-bar ${!showFavorite ? "hidden" : ""}`}textAlign="center">
+        <Button className='close-button' onClick={toggleState}><CloseIcon /></Button>
+        <Stack
+          direction="row" pt={'5vh'} pl={'1vw'}>
+          <Typography >Meus Favoritos: </Typography>
+        </Stack >
+        <Stack justifyContent='center'
+          alignItems='center' >
+          <Typography pt={'5vh'}
+            pb={'1vh'}>
+            Clique em Favoritar para adicionar
+             </Typography>
+             <FavoriteIcon/>
+        </Stack>
+      </Box>
+        
     </>
   );
 };
@@ -32,11 +44,24 @@ const Cart = ({ showCart, setCartState }) => {
 
   return (
     <>
-      <div className="button-cart">
-        <Button onClick={toggleState}><ShoppingCartIcon /></Button>
 
-        <div className={`cart-bar ${!showCart ? "hidden" : ""}`}>Cart</div>
-      </div>
+      <Button onClick={toggleState}><ShoppingCartIcon /></Button>
+
+      <Box className={`cart-bar ${!showCart ? "hidden" : ""}`} textAlign="center">
+        <Button className='close-button' onClick={toggleState}><CloseIcon /></Button>
+        <Stack
+          direction="row" pt={'5vh'} pl={'1vw'}>
+          <Typography >Meu Carrinho</Typography>
+        </Stack >
+        <Stack justifyContent='center'
+          alignItems='center' >
+          <Typography pt={'5vh'}
+            pb={'1vh'}>
+            Seu carrinho está vazio</Typography>
+          <SentimentVeryDissatisfiedIcon />
+        </Stack>
+      </Box>
+
     </>
   );
 };
@@ -73,14 +98,14 @@ export default function Header() {
 
             />
             <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-              <SearchIcon />
+          <SearchOutlined />
             </IconButton>
 
 
           </Paper>
         </div>
         <Stack className="header" direction="row">
-          <Favorito showFavorite={showFavorite} setFavoriteState={handleToggleFavorite}/>
+          <Favorito showFavorite={showFavorite} setFavoriteState={handleToggleFavorite} />
           <Cart showCart={showCart} setCartState={handleToggleCart} />
         </Stack>
       </Stack>

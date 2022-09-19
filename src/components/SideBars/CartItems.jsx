@@ -5,12 +5,9 @@ import { Box, Stack, Typography, Divider } from '@mui/material'
 
 const Cart = () => {
 
-    const closeCart = () =>{
-        document.querySelector('.cart-bar').style.visibility  = 'hidden';
-    }
   return (
     <Box className='cart-bar' textAlign="center">
-    <CloseIcon className='close-icon' onClick={closeCart}/>
+    <CloseIcon className='close-icon'/>
     <Stack pt={12} pl={2}
       direction="row"
       justifyContent="center"
